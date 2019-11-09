@@ -4,7 +4,7 @@ A proposed challenge to apply for a NodeJS developer work.
 
 ## Getting Started
 
-There are ways proposed ways to get started with the application. One is **manual configuring**, and the other is using **docker compose**.
+There are 2 proposed ways to get started with the application. One is **manual configuring**, and the other is using **docker compose**.
 
 ### Manual Configuring
 
@@ -48,7 +48,7 @@ node app/index.js
 ### Docker Compose
 
 This is a much easier way to run the application.
-
+Go to the project's root folder.
 Build the app image running:
 
 ```
@@ -87,7 +87,7 @@ docker exec sms sh -c "npm run test"
 
 ## Deployment
 
-The application is deployed to Google Cloud Platform regarding these 2 docker images
+The application is deployed to Google Cloud Platform considering these 2 docker images
 
 ```
 gcr.io/steel-math-257901/sms
