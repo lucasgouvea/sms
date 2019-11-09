@@ -10,7 +10,7 @@ if (window) {
 }
 
 app.constant('config', {
-  backend: `http://localhost:${env.PORT}`,
+  backend: `http://${env.HOST}:${env.PORT}`,
 });
 
 app.config([
