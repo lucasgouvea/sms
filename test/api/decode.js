@@ -14,8 +14,9 @@ const options = {
 describe('Decoder API', () => {
   it('Should handle a request to decode a number sequence and send '
   + 'the decoded text message response back', (done) => {
-    request(options, (err, _, body) => {
+    request(options, (err, res, body) => {
       expect(err).to.be.equal(null);
+      expect(res.statusCode).to.be.equal(200);
       expect(body.textMessage).to.be.equals('TESTE DE MESA');
       done();
     });
