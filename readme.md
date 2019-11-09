@@ -1,6 +1,6 @@
 # SMS
 
-A proposed challenge to apply for a NodeJS developer work.
+A proposed challenge to apply for a NodeJS developer position.
 
 ## Getting Started
 
