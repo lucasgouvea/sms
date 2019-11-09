@@ -4,7 +4,7 @@ A proposed challenge to apply for a NodeJS developer position.
 
 ## Getting Started
 
-There are 2 proposed ways to get started with the application. One is **manual configuring**, and the other is using **docker compose**.
+There are 2 proposed ways to get started with the application. One is **manual configuring**, and the other is using **docker compose** (much easier).
 
 ### Manual Configuring
 
@@ -23,11 +23,11 @@ Create a **.env** file containing
 
 #### Client
 
-Configure the API port on the **env.js** file inside the **client** root folder.
+Configure the API port and host on the **env.js** file inside the **client** root folder.
 
-```
-window.env.PORT = 8080;
-```
+* window.env.HOST = 35.203.39.237;
+* window.env.PORT = 8080;
+
 
 #### Mongo
 
@@ -87,7 +87,7 @@ docker exec sms sh -c "npm run test"
 
 ## Deployment
 
-The application is deployed to Google Cloud Platform (http://35.203.39.237:8080/#!/)considering these 2 docker images
+The application is deployed to [Google Cloud Platform](http://35.203.39.237:8080/#!/) considering these 2 docker images
 
 ```
 gcr.io/steel-math-257901/sms
@@ -95,10 +95,4 @@ gcr.io/steel-math-257901/sms
 
 ```
 gcr.io/steel-math-257901/mongo
-```
-
-To deploy, push them to GCP and then pull on the cloud host machine. On the host machine switch the **docker-compose.yaml** to **docker-compose-prod.yaml**, then run
-
-```
-docker-compose up
 ```
