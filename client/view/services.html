@@ -1,0 +1,27 @@
+<div class="text-center" ng-controller="encode-decode">
+	<br>
+	<h2>Encode/Decode Service</h2>
+	<br>
+	<div>
+		<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<label class="input-group-text" for="inputGroupSelect01">Operation</label>
+				</div>
+				<select ng-model="operation" class="custom-select" id="inputGroupSelect01">
+					<option value="text-message">Text Message to Number Sequence</option>
+					<option value="number-sequence">Number Sequence to Text Message</option>
+				</select>
+    </div>
+		<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Type</span>
+				</div>
+				<textarea ng-model="text" class="form-control" aria-label="Text Message"></textarea>
+			</div>
+      <button ng-click="convert()" style="margin-top: 40px;" type="button" 
+        class="btn btn-info" ng-disabled="operation === ''">Convert
+      </button>
+			<br><br><br>
+			<label><b>Result:</b></label>
+			<label>{{result}}</label>
+</div>

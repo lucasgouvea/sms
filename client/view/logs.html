@@ -1,0 +1,18 @@
+<div class="text-center">
+  <br>
+  <h2>Logs</h2>
+  <br>
+  <div  class="row">  
+    <div class="card example-1 square scrollbar-cyan bordered-cyan">
+      <div class="card-body">
+        <div ng-repeat="l in logs">
+          <p>
+            <b>Text Message: </b> {{l.textMessage}} &nbsp;&nbsp;&nbsp;
+            <b>Number Sequence: </b> {{l.numberSequence}} &nbsp;&nbsp;&nbsp;
+            <b>Timestamp: </b> {{l.date}} &nbsp;&nbsp;&nbsp;
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
