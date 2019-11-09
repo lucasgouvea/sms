@@ -1,6 +1,6 @@
 # SMS
 
-A proposed challenge to apply for a NodeJS developer work.
+A proposed challenge to apply for a NodeJS developer position.
 
 ## Getting Started
 
@@ -87,7 +87,7 @@ docker exec sms sh -c "npm run test"
 
 ## Deployment
 
-The application is deployed to Google Cloud Platform considering these 2 docker images
+The application is deployed to Google Cloud Platform (http://35.203.39.237:8080/#!/)considering these 2 docker images
 
 ```
 gcr.io/steel-math-257901/sms
