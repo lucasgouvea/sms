@@ -1,8 +1,7 @@
 version: '3'
 services:
   mongo:
-    container_name: mongo-sms
-    image: "mongo:sms"
+    image: "gcr.io/steel-math-257901/mongo"
     ports:
       - "27017:27017"
     environment:
@@ -11,19 +10,16 @@ services:
     networks:
       - sms_network
   app:
-    container_name: sms
     restart: "always"
-    image: "sms"
+    image: "gcr.io/steel-math-257901/sms"
     ports:
-      - "8080:8080"
+      - "80:80"
     environment:
-      - API_PORT=8080
+      - API_PORT=80
       - MONGO_HOST=mongo
       - MONGO_DB=sms
       - MONGO_USER=root
       - MONGO_PASSWORD=1q2w3e
-    depends_on:
-      - mongo
     networks:
       - sms_network
 networks:

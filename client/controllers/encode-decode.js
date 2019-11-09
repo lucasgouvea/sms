@@ -1,7 +1,9 @@
 angular.module('app').controller('encode-decode', [
   '$scope',
   '$http',
-  function ($scope, $http) {
+  'config',
+  function ($scope, $http, config) {
+    const { backend } = config;
     $scope.result = '';
     $scope.operation = '';
     $scope.text = '';
@@ -26,7 +28,7 @@ angular.module('app').controller('encode-decode', [
         default: data = 'text-message'; route = 'encode'; break;
       }
       data = JSON.stringify(data);
-      $http.post(`http://localhost/${route}`, data, header).then(
+      $http.post(`${backend}/${route}`, data, header).then(
         (res) => { $scope.result = res.data[type]; },
         (err) => { console.log(err); },
       );

@@ -18,6 +18,7 @@ module.exports = {
     "no-plusplus": 0,
     "no-undef": 0,
     "no-param-reassign": 0,
-    "no-console": 0
+    "no-console": 0,
+    "func-names": 0
   },
 };

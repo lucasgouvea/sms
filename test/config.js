@@ -1,3 +1,3 @@
 exports.endpoint = {
-  url: 'http://localhost',
+  url: 'http://localhost:8080',
 };

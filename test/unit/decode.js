@@ -9,9 +9,4 @@ describe('Encoder units', () => {
     expect(decoded).to.be.equal('TESTE DE MESA');
     done();
   });
-  it('Should decode a number sequence to a text message', (done) => {
-    const decoded = decode('4444336753464633_34343');
-    expect(decoded).to.be.equal('TESTE DE MESA');
-    done();
-  });
 });

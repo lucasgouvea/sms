@@ -2,8 +2,15 @@ const app = angular.module('app', [
   'ui.router',
 ]);
 
+
+const env = {};
+
+if (window) {
+  Object.assign(env, window.env);
+}
+
 app.constant('config', {
-  backend: 'http://localhost',
+  backend: `http://localhost:${env.PORT}`,
 });
 
 app.config([
