@@ -22,8 +22,6 @@ services:
       - MONGO_DB=sms
       - MONGO_USER=root
       - MONGO_PASSWORD=1q2w3e
-    depends_on:
-      - mongo
     networks:
       - sms_network
 networks:
