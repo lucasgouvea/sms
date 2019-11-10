@@ -4,55 +4,59 @@ A proposed challenge to apply for a NodeJS developer position.
 
 ## Getting Started
 
-There are 2 proposed ways to get started with the application. One is **manual configuring**, and the other is using **docker compose** (much easier).
+There are 2 proposed ways to get started with the application. One is **manual configuring**, and the other is using **docker compose**.
 
 ### Manual Configuring
 
-In this case, you will need a mongo instance running either on localhost or on a container.
-
+In this case, you will connect to a mongo instance running on Google Cloud Platform.
 
 #### API
 
 Create a **.env** file containing
 
 * API_PORT=8080
-* MONGO_HOST=localhost
+* MONGO_HOST=35.203.39.237
+* MONGO_PORT=27017
 * MONGO_DB=sms
 * MONGO_USER=root
 * MONGO_PASSWORD=1q2w3e
 
-#### Client
-
-Configure the API port and host on the **env.js** file inside the **client** root folder.
-
-* window.env.HOST = 35.203.39.237;
-* window.env.PORT = 8080;
-
-
-#### Mongo
-
-Create a database named **sms** and 2 collections, one named **decodeLog** and the other named **encodeLog**.
-
-If necessary, give admin permission to the database as following:
-
-```
-db.createUser({ user: 'root', pwd: '1q2w3e', roles: [ { role: 'root', db: 'admin' } ] })
-```
-
-After all run
+then
 
 ```
 npm install
 ```
-then
+
+to run
 
 ```
 node app/index.js
 ```
 
+You should expect to see
+
+```
+API Up on 8080
+```
+
+You can check your **Client** running on
+
+[http://localhost:8080/#!](http://localhost:8080/#!)
+
+
+or remotely on
+
+[http://35.203.39.237:8080/#!/logs]
+(http://35.203.39.237:8080/#!/logs)
+
+
+
+```
+Connected to Mongo
+```
+
 ### Docker Compose
 
-This is a much easier way to run the application.
 Go to the project's root folder.
 Build the app image running:
 
@@ -77,7 +81,7 @@ And the API, Client, and Mongo should be working properly.
 
 ## Running the tests
 
-Considering that the API and Mongo are up, execute:
+Considering that the API is up, execute:
 
 ```
 npm run test

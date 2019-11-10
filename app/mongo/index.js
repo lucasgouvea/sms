@@ -11,10 +11,10 @@ const connect = (uri) => new Promise((resolve, reject) => {
 
 exports.connectMongo = () => {
   const {
-    MONGO_HOST, MONGO_DB, MONGO_USER, MONGO_PASSWORD,
+    MONGO_HOST, MONGO_PORT, MONGO_DB, MONGO_USER, MONGO_PASSWORD,
   } = process.env;
 
-  const uri = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}/${MONGO_DB}`;
+  const uri = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}`;
   let connected = false;
   const interval = setInterval(() => {
     if (connected) {
