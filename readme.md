@@ -38,6 +38,9 @@ You should expect to see
 ```
 API Up on 8080
 ```
+```
+Connected to Mongo
+```
 
 You can check your **Client** running on
 
@@ -49,11 +52,6 @@ or remotely on
 [http://35.203.39.237:8080/#!/logs]
 (http://35.203.39.237:8080/#!/logs)
 
-
-
-```
-Connected to Mongo
-```
 
 ### Docker Compose
 
