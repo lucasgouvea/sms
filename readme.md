@@ -49,8 +49,7 @@ You can check your **Client** running on
 
 or remotely on
 
-[http://35.203.39.237:8080/#!/logs]
-(http://35.203.39.237:8080/#!/logs)
+[http://35.203.39.237:8080/#!/](http://35.203.39.237:8080/#!/)
 
 
 ### Docker Compose
