@@ -2,7 +2,7 @@ version: '3'
 services:
   mongo:
     container_name: mongo-sms
-    image: "gcr.io/steel-math-257901/mongo"
+    image: "mongo:sms"
     ports:
       - "27017:27017"
     environment:
@@ -13,7 +13,7 @@ services:
   app:  
     container_name: sms
     restart: "always"
-    image: "gcr.io/steel-math-257901/sms"
+    image: "sms"
     ports:
       - "8080:8080"
     environment:
